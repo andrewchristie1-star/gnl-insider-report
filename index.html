@@ -875,12 +875,9 @@ function handleSubmit(e) {
     method: 'POST',
     body: formData
   }).then(() => {
-    document.getElementById('insider-form').style.display = 'none';
-    document.getElementById('form-success').style.display = 'block';
-    if (typeof fbq !== 'undefined') { fbq('track', 'Lead'); }
+    window.location.href = '/thank-you';
   }).catch(() => {
-    document.getElementById('insider-form').style.display = 'none';
-    document.getElementById('form-success').style.display = 'block';
+    window.location.href = '/thank-you';
   });
 }
 </script>
