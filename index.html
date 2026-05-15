@@ -856,7 +856,7 @@
 <section class="cta-bottom">
   <h2>Ready to Know Your Market?</h2>
   <p>Get the Great Neck Insider Report — free, instant, no obligation.</p>
-  <a href="#insider-form" class="btn-cta" onclick="document.getElementById('name').focus()">Get the Free Report →</a>
+  <a href="#insider-form" class="btn-cta" onclick="document.getElementById('firstName').focus()">Get the Free Report →</a>
 </section>
 
 <!-- FOOTER -->
@@ -877,9 +877,10 @@ function handleSubmit(e) {
   btn.disabled = true;
 
   const formData = new FormData();
-  formData.append('name', document.getElementById('name').value);
-  formData.append('phone', document.getElementById('phone').value);
-  formData.append('email', document.getElementById('email').value);
+  formData.append('firstName', document.getElementById('firstName').value);
+formData.append('lastName', document.getElementById('lastName').value);
+formData.append('phone', document.getElementById('phone').value);
+formData.append('email', document.getElementById('email').value);
 
   fetch('https://hooks.zapier.com/hooks/catch/2192980/ujen9if/', {
     method: 'POST',
