@@ -1,1 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Great Neck Insider Report | Andrew Christie</title>
+<meta name="description" content="Your free Great Neck Insider Report — neighborhood-by-neighborhood pricing, demand trends, and market data for Alanton, Great Neck Estates, Broad Bay Colony, Bay Island, and Great Neck Point.">
 
+<!-- Open Graph so the link previews nicely when shared/texted -->
+<meta property="og:title" content="Your Great Neck Insider Report">
+<meta property="og:description" content="Neighborhood-by-neighborhood pricing and market data for Great Neck, Virginia Beach.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.greatneckinsiderreport.com/report/">
+
+<style>
+  :root {
+    --navy: #16323f;
+    --navy-dark: #0e222c;
+    --gold: #b8944f;
+    --sand: #faf7f2;
+    --ink: #26313a;
+    --line: #e4ddd1;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--sand);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+
+  h1, h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--navy);
+    margin: 0;
+  }
+
+  a { color: var(--navy); }
+
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header */
+  header {
+    background: var(--navy);
+    color: #fff;
+    padding: 18px 0;
+  }
+
+  header .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  header .brand {
+    font-family: Georgia, serif;
+    font-size: 18px;
+  }
+
+  header .brand small {
+    display: block;
+    font-family: -apple-system, sans-serif;
+    font-size: 12px;
+    color: #c9c2b3;
+    font-weight: normal;
+  }
+
+  header .contact {
+    font-size: 14px;
+    text-align: right;
+  }
+
+  header .contact a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  header .contact a:hover { text-decoration: underline; }
+
+  /* Hero / confirmation */
+  .hero {
+    text-align: center;
+    padding: 56px 0 32px;
+  }
+
+  .hero .check {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    font-size: 22px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+    margin-bottom: 12px;
+  }
+
+  .hero p {
+    font-size: 16px;
+    color: #55636c;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  /* Document viewer card */
+  .doc-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    box-shadow: 0 6px 24px rgba(22, 50, 63, 0.08);
+    padding: 20px;
+    margin: 32px 0;
+  }
+
+  .doc-card iframe {
+    width: 100%;
+    height: 75vh;
+    min-height: 420px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+
+  .doc-fallback {
+    text-align: center;
+    font-size: 14px;
+    color: #6b7680;
+    margin-top: 14px;
+  }
+
+  .btn-row {
+    text-align: center;
+    margin-top: 18px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 6px;
+  }
+
+  .btn-primary {
+    background: var(--navy);
+    color: #fff;
+  }
+
+  .btn-primary:hover { background: var(--navy-dark); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--navy);
+    border: 1px solid var(--navy);
+  }
+
+  /* What's inside recap */
+  .recap {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 28px 32px;
+    margin: 32px 0;
+  }
+
+  .recap h2 {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+
+  .recap ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #3d4952;
+  }
+
+  .recap li { margin-bottom: 8px; }
+
+  /* CTA */
+  .cta {
+    text-align: center;
+    padding: 36px 0 48px;
+  }
+
+  .cta h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .cta p {
+    color: #55636c;
+    max-width: 480px;
+    margin: 0 auto 18px;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--navy-dark);
+    color: #b6c0c7;
+    font-size: 12px;
+    padding: 28px 0;
+    text-align: center;
+  }
+
+  footer a { color: #d7dee2; }
+
+  footer .links {
+    margin-top: 10px;
+  }
+
+  footer .links a {
+    margin: 0 8px;
+    text-decoration: none;
+  }
+
+  @media (max-width: 560px) {
+    header .wrap { justify-content: center; text-align: center; }
+    header .contact { text-align: center; }
+    .hero h1 { font-size: 24px; }
+    .doc-card iframe { height: 60vh; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">
+      Andrew Christie · The Coastal Collective
+      <small>Atlantic Sotheby's International Realty</small>
+    </div>
+    <div class="contact">
+      <a href="tel:+17575025077">(757) 502-5077</a><br>
+      <a href="mailto:andrew.christie@atlanticsir.com">andrew.christie@atlanticsir.com</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero">
+    <div class="check">&#10003;</div>
+    <h1>Your Great Neck Insider Report Is Ready</h1>
+    <p>Neighborhood-by-neighborhood pricing, demand trends, and the numbers that actually move your home's value — not the headlines.</p>
+  </section>
+
+  <section class="doc-card">
+    <iframe
+      src="great-neck-insider-report.pdf"
+      title="Great Neck Insider Report">
+    </iframe>
+    <p class="doc-fallback">Report not displaying? Use the download button below — it works on every device.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="great-neck-insider-report.pdf" download>Download the Report (PDF)</a>
+      <a class="btn btn-secondary" href="great-neck-insider-report.pdf" target="_blank" rel="noopener">Open in New Tab</a>
+    </div>
+  </section>
+
+  <section class="recap">
+    <h2>What's Inside</h2>
+    <ul>
+      <li>Current pricing bands for Alanton, Great Neck Estates, Broad Bay Colony, Bay Island, and Great Neck Point</li>
+      <li>Buyer demand trends and what's influencing offers right now</li>
+      <li>Days on market and absorption rate patterns by neighborhood</li>
+      <li>The upgrades buyers actually care about in this market</li>
+      <li>Recommendations for protecting your equity</li>
+    </ul>
+  </section>
+
+  <section class="cta">
+    <h2>Have a question about your specific home?</h2>
+    <p>I live in Great Neck and track this market street by street. If you want a read on your home's value or timing, I'm happy to walk through it with you — no pressure, no obligation.</p>
+    <a class="btn btn-primary" href="mailto:andrew.christie@atlanticsir.com?subject=Question%20about%20my%20Great%20Neck%20home">Email Andrew</a>
+    <a class="btn btn-secondary" href="tel:+17575025077">Call (757) 502-5077</a>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    Andrew Christie · License ID: 0225199734 · The Coastal Collective at Atlantic Sotheby's International Realty<br>
+    (757) 502-5077 · andrew.christie@atlanticsir.com
+    <div class="links">
+      <a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a> · <a href="#">Electronic Disclosure Consent Agreement</a>
+    </div>
+    &copy; 2026 Andrew Christie. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
